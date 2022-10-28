@@ -6,9 +6,9 @@ node {
 	}
 	stage('K8s Deploy') {
 		dir('DEployment_Test') {
-		//kubeconfig(credentialsId: 'KubernetesKubeConfig', serverUrl: 'https://10.50.16.16:6443') {
+		kubeconfig( serverUrl: 'https://10.50.16.10:8443') {
                               sh'kubectl apply -f Deployment.yml'
-                   // }
+                    }
 		}
 		
 		}
