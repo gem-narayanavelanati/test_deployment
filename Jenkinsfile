@@ -1,6 +1,6 @@
 node('kube_runner') {
 	stage('cloning git repo') {
-		cleanWs()
+		//cleanWs()
 		    dir('DEployment_Test') {
                 git branch: 'main', url:'https://github.com/gem-khushiporwal/test_deployment.git'
 	        }
