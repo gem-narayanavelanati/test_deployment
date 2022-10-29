@@ -1,5 +1,6 @@
 node {
 	stage('cloning git repo') {
+		cleanWs()
 		dir('DEployment_Test') {
         git branch: 'main', url:'https://github.com/gem-khushiporwal/test_deployment.git'
 	}
