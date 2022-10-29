@@ -7,7 +7,7 @@ node('kube_runner') {
 	}
 	stage('K8s Deploy') {
 		dir('DEployment_Test') {
-		    kubeconfig(credentialsId: 'KubeConfigCred', serverUrl: 'https://10.50.16.10:8443') {
+		    kubeconfig(credentialsId: 'KubeConfigCred') {
 			    """
     cat <<EOF >> Deployment.yml
     apiVersion: apps/v1
